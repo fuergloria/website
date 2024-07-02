@@ -1,0 +1,21 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+
+body {
+  background-image: url('/pics/staub.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: right;
+  width: 100%;
+}
+
+.bg-body-tertiary{
+  background-color: $cyan-200;
+}
+.hallo{
+  background-color: $cyan-300;
+}
+

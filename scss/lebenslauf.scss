@@ -1,0 +1,81 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+
+.cv-container{
+  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.5);
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  padding: 2rem;
+  margin: 4rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+h3{
+  text-align: center; 
+}
+
+.bewerbungsbild-container{
+  width: auto;
+  display: flex;
+  justify-content: center; 
+
+  background-image: url(/pics/Bild1.png);
+  background-repeat: no-repeat;
+    background-size:contain;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+
+.bewerbungsbild{
+  position: relative;
+  width: 10rem;
+   border-radius: 10%;
+}
+
+.headlines{
+  text-indent: 4rem;
+  padding-bottom: 0rem;
+  
+}
+
+h5{
+  margin: 0;
+}
+
+.table{
+  > :not(caption) > * > * {
+    background-color: transparent;
+  }
+}
+
+
+
+.headlines{
+  border-bottom: solid white 2px;
+  text-indent: 4rem;
+  padding-bottom: 0.5rem;
+}
+
+.date{
+  padding: 0;
+}
+.row{
+  padding-bottom: 6px;
+}
+
+.arbeitsamtrow{
+  padding: 0;
+}
+
+.skills{
+  text-align: center;
+}
+
+
+
+
+
