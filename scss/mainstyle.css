@@ -226,7 +226,7 @@ body {
 
 .frog-container:hover::after{
   content: '';
-  background-image: url('/pics/frog-dark-0.jpg');
+  background-image: url('pics/frog-dark-0.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
