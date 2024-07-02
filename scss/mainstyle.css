@@ -93,7 +93,7 @@ body {
   color: white;  
   text-shadow: 2px 2px 8px black;
 
-  background-image: url("/pics/abstract.jpg");
+  background-image: url("pics/abstract.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
