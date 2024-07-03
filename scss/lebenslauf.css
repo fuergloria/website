@@ -1,44 +1,44 @@
 body{
   background-color: whitesmoke;
-  background-image: none;
-  color:black;
 }
 
-.skills-container {
-  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  margin: 0 6rem 0 6rem;
-  height: 90vh;
-  
-}
+
 
 h3 {
   text-align: center;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6{
+  margin-top: 6px;
 }
 
 .col-md-auto{
   margin: 2rem;
 }
 
+.topbar-container, .topbar2-container, .bewerbungsbild-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .topbar-container{
   padding: 0;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.5);
-  padding: calc(var(--bs-gutter-x)* .5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url(../pics/handpaint2.2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:top;
   height: 100vh;
-  
 }
+
 
 .topbar2-container{
   width: 60%;
-  display: flex;
-  justify-content: center;
   background-color: white;
     
 }
@@ -46,9 +46,7 @@ h3 {
 .bewerbungsbild-container {
   width: auto;
   height: 100%;
-  display: flex;
   justify-content:right;
-  align-items: center;
   
 }
 
@@ -66,71 +64,58 @@ h3 {
   width: 80%;
 }
 
+.skills-container, .skills{
+  display: flex;
+  justify-content:  center;
+}
+  
 
-.headlines {
-  text-indent: 4rem;
-  padding-bottom: 0rem;
+.skills-container {
+  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.5);
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 6rem 0 6rem;
+  height: 90vh;
 }
 
-h5 {
-  margin: 0;
+
+
+.progress{
+  --bs-progress-bg: none;
+  --bs-progress-border-radius: 0%;
 }
 
-h6{
-  margin-top: 6px;
+.progress-bar {
+  width: 0%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: width 1s ease-out, opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.progress-bar.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.percentage {
+  display: flex;
 }
 
 .table > :not(caption) > * > * {
   background-color: transparent;
 }
 
-.headlines {
-  border-bottom: solid white 2px;
-  text-indent: 4rem;
-  padding-bottom: 0.5rem;
-}
+
 
 .date {
   padding: 0;
+  color:#2196F3;
 }
 
 .row {
   padding-bottom: 6px;
 }
 
-.arbeitsamtrow {
-  padding: 0;
-}
-
-.skills {
-  display: flex;
-  justify-content:  center;
-}
-
-.kontaktformular{
-  margin: 12px;
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: stretch;
-}
-
-.kontaktinfo{
-  display: flex;
-  align-items: center;
-  padding-left: 60px;
-  flex: 1;
-}
-
-.kontakteingabe{
-  padding: 60px;
-  padding-top: 70px;
-  flex: 1;
-}
-
-.btn-submit{
-  margin-top: 10px;
-}
 
 .timeline {
   position: relative;
@@ -206,29 +191,79 @@ h6{
   margin-top:8px;
 }
 
-.date{
-  color:#2196F3;
+
+.download-container{
+  position: relative;
+  display: inline-block;
+  padding: calc(var(--bs-gutter-x));
+  margin-top: 3rem;
+ 
+  
 }
 
-.percentage {
+.bild-container img{
+  display: block;
+  width: 100%;
+  height:fit-content;
+}
+
+.download-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.download-icon a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.kontaktformularbackground{
+  background-image: url(../pics/handpaint2.2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+  height: 100vh;
+  margin: 0;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--bs-gutter-x)* .5);
+  
 }
 
-.progress{
-  --bs-progress-bg: none;
-  --bs-progress-border-radius: 0%;
+
+.kontaktformular{
+  margin: calc(var(--bs-gutter-x)* .5);
+  background-color: white;
+  display: flex;
+  align-items: stretch;
 }
 
-.progress-bar {
-  width: 0%;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: width 1s ease-out, opacity 0.6s ease-out, transform 0.6s ease-out;
+.kontaktinfo{
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  flex: 1;
 }
 
-.progress-bar.show{
-  opacity: 1;
-  transform: translateY(0);
+.kontakteingabe{
+  padding: 60px;
+  padding-top: 70px;
+  flex: 1;
 }
+
+.btn-submit{
+  margin-top: 10px;
+}
+
+
+
+
 /*# sourceMappingURL=lebenslauf.css.map */

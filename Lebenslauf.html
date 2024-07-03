@@ -31,7 +31,7 @@
 
   <ul class="navbar nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active permanent-marker-regular" aria-current="page" href="landingpage.html">
+      <a class="nav-link active permanent-marker-regular" aria-current="page" href="index.html">
         G
       </a>
     </li>
@@ -572,59 +572,91 @@
 
 
 
-  <div class="container mt-5 col-sm-6">
 
-    <div class="row kontaktformular" id="kontakt">
-      
-      <div class="col-sm-5 kontaktinfo">
 
-        <div>
-          <h2>Kontakt</h2>
-          <p>Ich freue mich über Ihr Interesse! Für weitere Informationen oder Anfragen, können Sie mich gerne
-            telefonisch
-            oder per E-Mail erreichen. Sie können auch das Kontaktformular nutzen und ich melde mich schnellstmöglich
-            zurück.</p>
-          <p><strong>Telefon:</strong> +49 160 90939614</p>
-          <p><strong>Email:</strong> <a href="mailto:fuernkaes.gloria@web.de">fuernkaes.gloria@web.de</a></p>
+
+
+
+    <div class="kontaktformularbackground row justify-content-center">
+
+      <div class=" col-sm-6 justify-content-center">
+
+        <div class="row kontaktformular" id="kontakt">
+          
+          <div class="col-sm-5 kontaktinfo">
+    
+            <div>
+              <h2>Kontakt</h2>
+              <p>Ich freue mich über Ihr Interesse! Für weitere Informationen oder Anfragen, können Sie mich gerne
+                telefonisch
+                oder per E-Mail erreichen. Sie können auch das Kontaktformular nutzen und ich melde mich schnellstmöglich
+                zurück.</p>
+              <p><strong>Telefon:</strong> +49 160 90939614</p>
+              <p><strong>Email:</strong> <a href="mailto:fuernkaes.gloria@web.de">fuernkaes.gloria@web.de</a></p>
+            </div>
+    
+    
+          </div>
+    
+          <div class="col kontakteingabe">
+            <form action="https://formspree.io/f/mjkbvwrn" method="POST">
+              <div class="mb-3">
+    
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" aria-required="true" maxlength="100"
+                  autocomplete="off" aria-label="Name" value aria-invalid="true" required>
+              </div>
+              <div class="mb-3">
+    
+                <input type="email" name="email" class="form-control" id="email" required placeholder="E-mail"
+                  pattern="^.+@.+\.[a-zA-Z]{2,63}$" maxlength="250" autocomplete="off" aria-label="E-Mail-Adresse" value=""
+                  aria-invalid="true">
+    
+              </div>
+              <div class="mb-3">
+    
+                <input type="tel" name="number" class="form-control" id="phone" placeholder="Telefonnummer" maxlength="50"
+                  autocomplete="off" aria-label="Telefon" value="">
+              </div>
+              <div class="mb-3">
+    
+                <textarea name="message" class="form-control" id="message" rows="4" required placeholder="Ihre Nachricht" value=""
+                  aria-invalid="true"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">Absenden</button>
+            </form>
+    
+          </div>
+    
         </div>
-
-
+    
+    
+    
       </div>
 
-      <div class="col kontakteingabe">
-        <form action="https://formspree.io/f/mjkbvwrn" method="POST">
-          <div class="mb-3">
-
-            <input type="text" name="name" class="form-control" id="name" placeholder="Name" aria-required="true" maxlength="100"
-              autocomplete="off" aria-label="Name" value aria-invalid="true" required>
-          </div>
-          <div class="mb-3">
-
-            <input type="email" name="email" class="form-control" id="email" required placeholder="E-mail"
-              pattern="^.+@.+\.[a-zA-Z]{2,63}$" maxlength="250" autocomplete="off" aria-label="E-Mail-Adresse" value=""
-              aria-invalid="true">
-
-          </div>
-          <div class="mb-3">
-
-            <input type="tel" name="number" class="form-control" id="phone" placeholder="Telefonnummer" maxlength="50"
-              autocomplete="off" aria-label="Telefon" value="">
-          </div>
-          <div class="mb-3">
-
-            <textarea name="message" class="form-control" id="message" rows="4" required placeholder="Ihre Nachricht" value=""
-              aria-invalid="true"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-submit">Absenden</button>
-        </form>
-
+     <div class="download-container justify-content-center">
+      
+        <div class="row download-icon">
+          <a href="pics/Lebenslauf.pdf" download="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+          </svg></a>
+        </div>
+        
+       <div class="text-center">Lebenslauf runterladen
       </div>
+      </div>
+
+      
+      
+
+      
+
 
     </div>
 
 
-
-  </div>
+    
 
 
 
