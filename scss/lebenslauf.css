@@ -156,12 +156,13 @@ h3 {
   position: relative;
   background-color: whitesmoke;
   width: 50%;
+  opacity: 0;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-item.show{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(50);
 }
 
 .timeline-item-left {
@@ -202,6 +203,10 @@ h3 {
 
 .nobottom{
   margin-bottom: 0;
+}
+
+.notop{
+  margin-top: 0;
 }
 
 .download-container{
