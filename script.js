@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
   function revealtimeline() {
@@ -18,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   function revealbar() {
     var barItems = document.querySelectorAll('.progress-bar');
     var windowHeight = window.innerHeight;
@@ -35,36 +32,54 @@ document.addEventListener("DOMContentLoaded", function () {
         item.style.width = '0';
       }
     });
+  }
+
+  function flyball() {
+
+    const ball2 = document.getElementById("ball2");
+    const nobball2 = document.getElementById("nobball2");
+    const nobball3 = document.getElementById("nobball3");
+
+    ball2.addEventListener("click", () => {
+      ball2.style.animation = "flyBall2 2s ease-in-out forwards";
+
+      setTimeout(() => {
+        ball2.style.animation = "flyBall2 2s ease-in-out forwards";
+      }, 10);
+    });
+
+    nobball2.addEventListener("click", () => {
+      nobball2.style.animation = "flynobBall2 2s ease-in-out forwards";
+
+      setTimeout(() => {
+        nobball2.style.animation = "flynobBall2 2s ease-in-out forwards";
+      }, 10);
+    });
+
+    nobball3.addEventListener("click", () => {
+      nobball2.style.animation = "flynobBall3 2s ease-in-out forwards";
+
+      setTimeout(() => {
+        nobball3.style.animation = "flynobBall3 2s ease-in-out forwards";
+      }, 10);
+    });
 
   }
 
-
-  function sameheight(){
-    const aboutmetext = document.getElementById('aboutmetext');
-    const bildcontainerselbst = document.getElementById('bild-container-selbst');
-  
-    const textHeight = aboutmetext.offsetHeight;
-    
-  
-    bildcontainerselbst.style.height = textHeight + 'px';
-
-    
-    
-  }
-
-    window.addEventListener('scroll', function () {
-      revealtimeline();
-      revealbar();
-    });
-
-    window.addEventListener('resize', function () {
-      revealtimeline();
-      revealbar();
-    });
-
-    // Initial check on page load
-    sameheight();
+  window.addEventListener('scroll', function () {
     revealtimeline();
     revealbar();
-
   });
+
+  window.addEventListener('resize', function () {
+    revealtimeline();
+    revealbar();
+  });
+
+  // Initial check on page load
+  
+  revealtimeline();
+  revealbar();
+  flyball(); // Initialisiere die flyball-Funktion
+
+});
