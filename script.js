@@ -36,17 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function flyball() {
 
-    const ball2 = document.getElementById("ball2");
     const nobball2 = document.getElementById("nobball2");
     const nobball3 = document.getElementById("nobball3");
 
-    ball2.addEventListener("click", () => {
-      ball2.style.animation = "flyBall2 2s ease-in-out forwards";
-
-      setTimeout(() => {
-        ball2.style.animation = "flyBall2 2s ease-in-out forwards";
-      }, 10);
-    });
 
     nobball2.addEventListener("click", () => {
       nobball2.style.animation = "flynobBall2 2s ease-in-out forwards";
@@ -65,6 +57,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
+  /*
+    function revealflower() {
+      var vase = document.querySelectorAll('.flower');
+      var windowHeight = window.innerHeight;
+      var elementVisible = 2000;
+  
+      vase.forEach(function (item) {
+        var elementTop = item.getBoundingClientRect().top;
+  
+        if (elementTop < windowHeight - elementVisible) {
+          item.classList.add('show');
+          item.style.clipPath='inset(0 0 0 0)';
+        } else {
+          item.classList.remove('show');
+          item.style.clipPath='inset(100% 0 0 0)';
+        }
+      });
+    }
+  */
+
+  function vanishflower() {
+    const booty = document.getElementById('booty');
+    const flower = document.querySelector('.flower');
+
+    if(!flower){
+      console.error("Element with class flower not found");
+    }
+
+    booty.addEventListener('click', () => {
+  
+      if (!flower.classList.contains('show')) {
+        flower.classList.add('show');
+      }
+      else {
+        flower.classList.remove('show');
+      }
+
+    })
+  }
+
+
+
 
   window.addEventListener('scroll', function () {
     revealtimeline();
@@ -77,9 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initial check on page load
-  
+
   revealtimeline();
   revealbar();
   flyball(); // Initialisiere die flyball-Funktion
+  vanishflower();
+
 
 });

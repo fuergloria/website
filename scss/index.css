@@ -120,6 +120,39 @@ body {
   margin: 0;
 }
 
+.vase{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+
+}
+
+.booty{
+  width: 100%;
+
+}
+
+.flower{
+  position: absolute;
+  top: -22%;
+  left: 1%;
+  width: 90%;
+  height: auto;
+  z-index: 2;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 3s;
+}
+
+.booty:hover{
+  cursor: pointer;
+}
+
+.flower.show{
+  clip-path: inset(0 0 0 0);
+}
+
 
 .ball{
   position: absolute;
