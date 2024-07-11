@@ -126,6 +126,9 @@ body {
   justify-content: center;
   align-items: center;
   overflow: visible;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 
 }
 
@@ -141,16 +144,25 @@ body {
   width: 90%;
   height: auto;
   z-index: 2;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 3s;
-}
-
-.booty:hover{
+  transition: transform 4s ease-in-out; /* Transition für die Transformationsänderungen */
+  transform-origin: center; /* Setzt den Ursprung der Transformation in die Mitte */
+  opacity: 0; /* Startet das Bild unsichtbar */
   cursor: pointer;
 }
 
+
 .flower.show{
-  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  animation: grow 2s ease-in-out;
+}
+
+@keyframes grow{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
 }
 
 
@@ -159,7 +171,7 @@ body {
     top:50%;
     left: -1.5rem;
     width: 1.5rem;
-    animation: flyBall 2s ease-in-out forwards;
+    animation: flyBall 1s ease-in-out forwards;
 }
 
 .ball2{

@@ -2,12 +2,9 @@ body{
   background-color: whitesmoke;
 }
 
-
-
 h3 {
   text-align: center;
 }
-
 
 
 .col-md-auto{
@@ -30,30 +27,22 @@ h3 {
   background-position:top;
   min-height: 100vh;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 
 .topbar2-container{
   max-width: 70%;
   background-color: white;
-  box-sizing: border-box;
-
-    
+  box-sizing: border-box;    
 }
 
 .bewerbungsbild-container {
-  max-width: 80%;
-  display: flex;
-  justify-content:right;
-  
+  max-width: 80%;  
 }
 
 .bewerbungsbild {
   position: relative;
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 50%;
 }
 
@@ -299,7 +288,21 @@ h3 {
   padding: 3rem;
 }
 
+.nav-menu{
+  cursor: pointer;
+}
 
+@media (max-width: 768px){
+  .topbar2-container{
+    max-width: 90%;
+  }
+  .nav-item{
+    display: none;
+  }
+  .nav-item.show{
+    display: block;
+  }
+}
 
 
 
