@@ -307,6 +307,18 @@ h3 {
   .nav-item.show{
     display: block;
   }
+
+  .kontaktformular1{
+    width: 100%;
+  }
+  .kontaktinfo{
+    padding: 2rem 1rem;
+    flex: auto;
+  }
+
+  .kontakteingabe{
+    padding: 2rem;
+  }
   
   .skills-container-d{
     display: none;
@@ -335,10 +347,12 @@ h3 {
 
   .timeline-item{
     padding: 0.5rem;
+    box-sizing: border-box;
   }
   .timeline-item-content{
     padding: 0;
     font-size: small;
+    box-sizing: border-box;
   }
 
   .timeline-item-content h6{
