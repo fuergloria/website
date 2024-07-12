@@ -34,6 +34,7 @@ body {
   justify-content:flex-start;
   margin: 0;
   flex:1;
+  box-sizing: border-box;
 }
 
 .container-top{
@@ -42,26 +43,9 @@ body {
   justify-content: center; 
 }
 
-.bild-container-selbst{
-  margin:0;
-}
-
-.bild-container-selbst2{
-  width: auto;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  
-}
-
-.bild-selbst{
-  position: relative;
-  width: 100%;
-  
-}
 
 .aboutmetext{
-  max-width: 50%;
+  max-width: 60%;
   display: flex;
   align-items: center;
   margin: 0;
@@ -433,7 +417,14 @@ body {
 
 
 
-
+  @media (max-width: 768px) {
+    .aboutmetext{
+      max-width: 90%;
+    }
+    .container-top{
+      width: 100%;
+    }
+  }
 
 
 
