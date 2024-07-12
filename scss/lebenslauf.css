@@ -324,10 +324,15 @@ h3 {
 
   .skills-container-s .skills{
     justify-content: start;
+    font-size: smaller;
   }
 
   .skills-container-s .headline{
     justify-content: center;
+  }
+  .percentage{
+    padding: 0;
+    font-size: small;
   }
 }
 
