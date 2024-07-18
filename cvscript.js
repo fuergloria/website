@@ -52,22 +52,59 @@ document.addEventListener("DOMContentLoaded",function(){
       items.forEach(item=>item.classList.toggle('show'));
     }
   )
+  }
+
+  function backgroundfade(){
+    document.addEventListener('scroll',()=>{
+      const scrollPosition = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollRatio = scrollPosition/documentHeight;
+
+      const background2 = document.querySelector('.background');
+      background2.style.opacity = scrollRatio*4;
+
+      const background3 = document.querySelector('.background-t');
+      background3.style.opacity = scrollRatio;
+
+      const background4 = document.querySelector('.background-k');
+      background4.style.opacity = scrollRatio;
+    })
+  }
+
+  function breakpoint(){
+    var $targetElement = $('#breakpoint1');
+    var scrollBreakpoint = $targetElement.offset().top + $targetElement.outerHeight();
+    var hasStopped = false;
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= scrollBreakpoint && !hasStopped) {
+            hasStopped = true;
+            $('html, body').animate({ scrollTop: scrollBreakpoint }, 0);
+        } else if ($(window).scrollTop() < scrollBreakpoint) {
+            hasStopped = false;
+        }
+    });
+  }
 
     
     
-  }
+  
   
   window.addEventListener('scroll', function () {
     revealtimeline();
     revealbar();
+    backgroundfade();
   });
 
   window.addEventListener('resize', function () {
     revealtimeline();
     revealbar();
+    breakpoint();
   });
 
   revealtimeline();
   revealbar();
   toggleMenu();
+  backgroundfade();
+  breakpoint();
 })
