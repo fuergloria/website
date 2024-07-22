@@ -16,6 +16,10 @@
   font-weight: 400;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: "Oswald", sans-serif;
+}
+
 
 body{
   background-color: #FFFFFF;
@@ -31,6 +35,11 @@ body{
   color: #111827;
 }
 
+.backblack{
+  background-color: black;
+  color: white;
+}
+
 .primary{
   background-color: #064E3B;
   color: #FFFFFF;
@@ -38,6 +47,11 @@ body{
 
 .secundary{
   background-color: #0D9488;
+  color:#FFFFFF;
+}
+
+.secundary-soft{
+  background-color: rgb(13, 148, 136, 0.5);
   color:#FFFFFF;
 }
 
