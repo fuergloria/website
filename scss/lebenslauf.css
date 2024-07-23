@@ -258,7 +258,6 @@ h3 {
 .timeline-item-content {
   padding: 1rem;
   position: relative;
-  text-shadow: 0 0 4rem black;
 }
 
 
@@ -309,16 +308,22 @@ h3 {
   background-position:center;
   height: 100vh;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.kontaktformularbackground2{
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: calc(var(--bs-gutter-x)* 2);
-  box-sizing: border-box;
-  
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .kontaktformular1{
   width: 60vw;
+  color: #111827;
 }
 
 
@@ -335,11 +340,9 @@ h3 {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-}
-
-.kontaktinfo, .kontakteingabe{
   padding: 3rem;
 }
+
 
 .nav-menu{
   cursor: pointer;

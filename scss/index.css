@@ -129,6 +129,8 @@
   max-width: 70%;
   display: flex;
   justify-content: center;
+  background: linear-gradient(to bottom, rgb(13, 148, 136, 1), rgb(13, 148, 136, 0)), 
+              linear-gradient(to bottom, rgb(6, 78, 59, 0), rgb(6, 78, 59, 1));
 }
 
 
@@ -492,6 +494,18 @@
 
   .container-top {
     width: 100%;
+  }
+
+  .art2{
+    max-width: 100%;
+  }
+
+  .start{
+  height: fit-content;
+  }
+
+  .oswald h1{
+    font-size: 2rem;
   }
 }
 

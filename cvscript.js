@@ -64,10 +64,10 @@ document.addEventListener("DOMContentLoaded",function(){
       background2.style.opacity = scrollRatio*4;
 
       const background3 = document.querySelector('.background-t');
-      background3.style.opacity = scrollRatio;
+      background3.style.opacity = scrollRatio*2;
 
       const background4 = document.querySelector('.background-k');
-      background4.style.opacity = scrollRatio;
+      background4.style.opacity = scrollRatio*0.95;
     })
   }
 
