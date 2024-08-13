@@ -29,8 +29,15 @@
 
 <body>
 
-  <div class="start">
-    <ul class="nav justify-content-center primary">
+  <ul class="navbar nav justify-content-center primary">
+      
+    <li class="nav-menu first">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </li>  
+
+    <div class="second">
       <li class="nav-item primary">
         <a class="nav-link active permanent-marker-regular primary" aria-current="page" href="index.html">
           G
@@ -56,29 +63,34 @@
       <li class="nav-item">
         <a class="nav-link primary" href="Lebenslauf.html#kontakt">Kontakt</a>
       </li>
-    </ul>
-  
-    <div class="starter">
+    </div>
+    
+  </ul>
+  <div class="start secundary">
 
-
-      <div class="background back">
+    
   
-        <div class="container-fluid header secundary">
-          <div class="text-accent container bigheader oswald">
+        <div class="container-fluid header secundary oswald text-accent">
+          
+          <div class="container-fluid">
             <h1>Hallo, ich bin Gloria Fürnkäs</h1>
-            <h2>software engineering - business - art</h2>
-           </div>
+            <h2>software engineering - business - art</h2></div>
+            
+           
         </div>
       
         <div class="container-fluid aboutme ">
       
-          <div class="container aboutheader primary oswald">
-            <h2>Über mich</h2>
+          <div class="container-fluid aboutheader primary oswald">
+            
+              <h2>Über mich</h2>
+           
+            
           </div>
       
       
       
-            <div class="container-fluid aboutmetext col-sm-8 back">
+            <div class="container-fluid aboutmetext back">
       
               <div id="aboutmetext">
                 
@@ -90,48 +102,61 @@
                 </p>
               </div>
       
-            </div>
-      
-      
-      
-      
          
       
       
-        </div>
+      
+      
+         </div>
+      
+      
+       
       
        
       </div>
 
-      <div class="container-fluid artheader secundary oswald">
-        <h2>Malerei</h2>
-        <p>Die folgenden Bilder wurden alle von mir mit Acrylfarben angefertigt.
-        </p>
-        <a href="#portfolio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down icon-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
-        </svg></a>
+      <div class="secundary-soft test">
+        <div class="container-fluid artheader secundary oswald">
+
         
-      </div>
+        <h2>Malerei</h2>
+      <p>Die folgenden Bilder wurden alle von mir mit Acrylfarben angefertigt.
+      </p>
+      <a href="#portfolio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down icon-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+      </svg></a>
+      
+      
+
+      
+    </div>
+      
 
     </div>
+
   </div>
 
   
-<div class="art2container " id="portfolio">
-  <div class="container row art2">
-    <div class="col">
+<div class="art2container" id="portfolio">
+  
+  <div class="container row art2 ">
+    <div class="col-sm">
       <div class="bild-container vogel-container">
         <img class="img-fluid" src="pics/bird-frontal.jpg" alt="Vogelgemälde">
       </div>
       <div class="frog-container bild-container">
         <img class="frog-image img-fluid" src="pics/frog-0.jpg" alt="">
       </div>
-      <div class="bild-container">
-        <img class="img-fluid" src="pics/esel-0.jpg" alt="Eselbild">
+      <div class="bild-container pokemon-container">
+        <img class="img-fluid" src="pics/pokemon-0.jpg" alt="Pokemongemälde">
       </div>
       
+      
+      
+     
+      
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="container-fluid container-carousel bild-container">
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
@@ -194,12 +219,18 @@
           </button>
         </div>
       </div>
-      <div class="bild-container pokemon-container">
-        <img class="img-fluid" src="pics/pokemon-0.jpg" alt="Pokemongemälde">
+
+      <div class="bild-container">
+        <img class="img-fluid" src="pics/esel-0.jpg" alt="Eselbild">
       </div>
       <div class="container hand-container bild-container">
         <img class="img-fluid rotate-img" src="pics/handsmoke-2.jpg" alt="">
       </div>
+
+      
+
+      
+      
     </div>
   </div>
   
@@ -212,56 +243,46 @@
 
 
 
-  <div class="container-fluid artheader artheader2 back">
+  <div class="container-fluid artheader2 secundary">
     <h3>weitere Kunstprojekte</h3>
+    <p>Auch neben herkömmlichen Bildern, liebe ich es kreativ zu werden. Bei den folgenden Gegenständen gibt es auch hier auf der Seite etwas zu entdecken.
+    </p>
   </div>
 
-  <div class="container-fluid row art" id="portfolio2">
+  <div class="verlauf"> <div class="container-fluid bottom"> 
+    <div class="container-fluid row art " id="portfolio2">
 
-    <div class="col-sm-4">
-      <div class="bild-container vase">
-       <img class="booty" src="pics/booty.png" alt="vase" id="booty">
-       <img class="flower" src="pics/flowers-try.png" alt="flower" id="flower">
+      <div class="col-sm">
+        <div class="bild-container vase">
+         <img class="booty" src="pics/booty.png" alt="vase" id="booty">
+         <img class="flower" src="pics/flowers-try.png" alt="flower" id="flower">
+        </div>
+      </div>
+  
+      <div class="col-sm">
+  
+        <div class="bild-container">
+          <img class="basketpong img-fluid" src="pics/basketpongnoback.png" alt="basketpong">
+          <div class="net"><img class="nobball" src="pics/basketball-clipart.png" alt="Ball" id="nobball">
+            <img class="nobball2" src="pics/basketball-clipart.png" alt="Ball" id="nobball2">
+            <img class="nobball3" src="pics/basketball-clipart.png" alt="Ball" id="nobball3"> </div>
+          
+        </div>
+  
       </div>
     </div>
-
-    <div class="col-sm-4">
-
-      <div class="bild-container">
-        <img class="basketpong img-fluid" src="pics/basketpongnoback.png" alt="basketpong">
-        <img class="nobball" src="pics/basketball-clipart.png" alt="Ball" id="nobball">
-        <img class="nobball2" src="pics/basketball-clipart.png" alt="Ball" id="nobball2">
-        <img class="nobball3" src="pics/basketball-clipart.png" alt="Ball" id="nobball3">
-      </div>
-
-    </div>
-
-    <div class="col-sm-4">
-
-      <div class="bild-container">
-        <video width="100%" height="auto" autoplay muted loop controls>
-          <source src="pics/blume.mp4" type="video/mp4">
-          Ihr Browser unterstützt das Video-Tag nicht.
-        </video>
-      </div>
-
-      
-
-    </div>
-
-
-
-
-
+  
+  
   </div>
+  </div>
+ 
 
 
 
 
-
-
-
+  <script src="universalscript.js"></script>
   <script src="script.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

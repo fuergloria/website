@@ -4,16 +4,52 @@ body{
 
 
 .nav{
-  background-color: white;
   position: sticky !important;
   top: 0;
   left: 0;
   opacity: 1;
   z-index: 100;
+  flex-direction: column;
+  width: 100%;
 }
+.first{
+  cursor: pointer;
+  display: none;
+  position: sticky !important;
+}
+
+.second{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.first.show{
+  display: flex;
+}
+.second.noshow{
+  display: none;
+}
+
+
+
 
 .permanent-marker-regular {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+
+
+@media (max-width: 768px){
+  
+  .second{
+    display: none;
+  }
+
+  .second.show{
+    display: flex;
+  }
 }

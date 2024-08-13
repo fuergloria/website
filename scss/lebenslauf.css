@@ -2,12 +2,16 @@ body{
   background-color: whitesmoke;
 }
 
+ul{
+  list-style-type: none;
+}
+
 h3 {
   text-align: center;
 }
 
 .abschnitt{
-  
+  width: 100%;
 }
 
 
@@ -77,14 +81,15 @@ h3 {
 
 
 .background{
-  
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.5s ease-out;
   z-index: 1;
   position: relative;
   color: white;
-  height: 100vh;
   align-items: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .background-t{
@@ -106,6 +111,7 @@ h3 {
 
 .skills-container-d {
   height: 80%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -113,6 +119,7 @@ h3 {
   opacity: 1;
   position: relative;
   z-index: 20;
+  width: 100%;
  
 
 }
@@ -160,22 +167,6 @@ h3 {
   background-color: transparent;
 }
 
-
-
-@media (max-width: 768px) {
-  .skills-container {
-    margin: 0 1rem; /* Reduce margins on smaller screens */
-    height: auto; /* Allow height to adjust based on content */
-  }
-
-  .skills-container .row {
-    flex-direction: column;
-  }
-
-  .skills-container .skills, .skills-container .percentage {
-    text-align: center;
-  }
-}
 
 
 
@@ -306,7 +297,7 @@ h3 {
   background-attachment: fixed;
   background-size: cover;
   background-position:center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   box-sizing: border-box;
 }
@@ -339,8 +330,11 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.kontaktinfo{
   flex: 1;
-  padding: 3rem;
 }
 
 
@@ -352,17 +346,33 @@ h3 {
   display: none;
 }
 
+
+
 @media (max-width: 768px){
+
+  .skills-container {
+    margin: 0 1rem; 
+    height: auto; 
+  }
+
+  .skills-container .row {
+    flex-direction: column;
+  }
+
+  .skills-container .skills, .skills-container .percentage {
+    text-align: center;
+  }
 
   .topbar2-container{
     max-width: 90%;
     margin: 6rem 0rem;
   }
-  .nav-item{
-    display: none;
-  }
-  .nav-item.show{
-    display: block;
+ 
+
+
+
+  .kontaktformularbackground2{
+    padding: calc(var(--bs-gutter-x)* 0.5);
   }
 
 
@@ -371,6 +381,11 @@ h3 {
     width: 100%;
     padding: 6rem 0rem;
   }
+
+  .kontaktformular2{
+    margin: 0;
+  }
+
   .kontaktinfo{
     padding: 2rem 1rem;
     flex: auto;
@@ -386,10 +401,13 @@ h3 {
 
   .skills-container-s{
     display: inline-block;
+    width: 100%;
+    flex-grow: 1;
   }
   .skills-container-s .row-s{
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .skills-container-s .skills{

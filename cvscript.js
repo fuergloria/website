@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
   function revealtimeline() {
     var timelineItems = document.querySelectorAll('.timeline-item');
     var windowHeight = window.innerHeight;
@@ -33,78 +33,46 @@ document.addEventListener("DOMContentLoaded",function(){
     });
   }
 
-  function toggleMenu() {
-
-    const menu = document.querySelector('.nav-menu');
-    const items = document.querySelectorAll('.nav-item');
-
-    if(!menu){
-      console.error("Element with class nav-menu not found");
-      return;
-    }
-
-    if(items.length===0){
-      console.error("Element with class nav-item not found");
-      return;
-    }
-
-    menu.addEventListener('click', () => {
-      items.forEach(item=>item.classList.toggle('show'));
-    }
-  )
-  }
-
-  function backgroundfade(){
-    document.addEventListener('scroll',()=>{
-      const scrollPosition = window.scrollY;
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollRatio = scrollPosition/documentHeight;
-
-      const background2 = document.querySelector('.background');
-      background2.style.opacity = scrollRatio*4;
-
-      const background3 = document.querySelector('.background-t');
-      background3.style.opacity = scrollRatio*2;
-
-      const background4 = document.querySelector('.background-k');
-      background4.style.opacity = scrollRatio*0.95;
-    })
-  }
-
-  function breakpoint(){
-    var $targetElement = $('#breakpoint1');
-    var scrollBreakpoint = $targetElement.offset().top + $targetElement.outerHeight();
-    var hasStopped = false;
-
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= scrollBreakpoint && !hasStopped) {
-            hasStopped = true;
-            $('html, body').animate({ scrollTop: scrollBreakpoint }, 0);
-        } else if ($(window).scrollTop() < scrollBreakpoint) {
-            hasStopped = false;
-        }
-    });
-  }
-
-    
-    
   
-  
-  window.addEventListener('scroll', function () {
-    revealtimeline();
-    revealbar();
-    backgroundfade();
-  });
 
-  window.addEventListener('resize', function () {
-    revealtimeline();
-    revealbar();
-    breakpoint();
-  });
 
+
+function backgroundfade() {
+  document.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollRatio = scrollPosition / documentHeight;
+
+    const background2 = document.querySelector('.background');
+    background2.style.opacity = 0.5 + scrollRatio * 2;
+
+    const background3 = document.querySelector('.background-t');
+    background3.style.opacity = scrollRatio * 2;
+
+    const background4 = document.querySelector('.background-k');
+    background4.style.opacity = scrollRatio * 0.95;
+  })
+}
+
+
+
+
+
+
+window.addEventListener('scroll', function () {
   revealtimeline();
   revealbar();
-  toggleMenu();
   backgroundfade();
-  breakpoint();
+});
+
+window.addEventListener('resize', function () {
+  revealtimeline();
+  revealbar();
+
+});
+
+revealtimeline();
+revealbar();
+backgroundfade();
+
 })
