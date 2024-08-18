@@ -1,12 +1,3 @@
-.abstract {
-  text-align: center;
-  background-image: url("../pics/abstract.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-
 .start {
   min-height: 95vh;
   display: flex;
@@ -14,24 +5,13 @@
   
 }
 
+
 .artheader {
   flex: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 0;
-}
-
-.aboutheader {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.test {
-  display: flex;
 }
 
 
@@ -45,22 +25,44 @@
   box-sizing: border-box;
   flex: 1;
   flex-wrap: wrap;
-
 }
 
-.container-top {
+
+.aboutheader {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 
-.aboutmetext {
+.test {
+  display: flex;
+}
+
+
+.aboutmetextcontainer {
   flex: 2;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 2rem;
-  justify-content: center;
+  width: 80%;  
+}
+
+
+.aboutmetext{
+  text-align: justify;
+  text-align-last: center;
+}
+
+@media (min-width: 1250px){
+  .aboutmetext{
+    width: 70%;
+    padding: 3rem 0;
+  }
 }
 
 .header {

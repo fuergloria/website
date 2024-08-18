@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   function toggleMenuscroll() {
-    const currentScrollTop = window.scrollY;
+    requestAnimationFrame(()=>{
+      const currentScrollTop = window.scrollY;
     const items = document.querySelector('.second');
     const dropdown = document.querySelector('.first');
 
@@ -30,12 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isMobileView) {
       if (currentScrollTop > lastScrollTop) {
         // Scrolling down
-        items.classList.remove('noshow');
-        dropdown.classList.add('show');
+        items.classList.remove('show');
+        dropdown.classList.remove('noshow');
       }
       else if(currentScrollTop===0){
-        items.classList.add('noshow');
-        dropdown.classList.remove('show');
+        
       }
       // else: Scrolling up, no need to show menu since 'show' state should be managed by toggleMenu click
     }
@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         items.classList.add('noshow');
         dropdown.classList.add('show');
         // Scrolling down, handle differently if needed for desktop view
-      } else if(currentScrollTop===0){
+      } 
+      else if(currentScrollTop===0){
         items.classList.remove('noshow');
         dropdown.classList.remove('show');
         // Scrolling up, handle differently if needed for desktop view
@@ -52,11 +53,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     lastScrollTop = currentScrollTop;
+
+    });
+    
   }
 
   function toggleMenu() {
     const menu = document.querySelector('.first');
     const items = document.querySelector('.second');
+
+    const isMobileView = window.innerWidth <= 768;
 
     if (!menu) {
       console.error("Element with class 'first' not found");
@@ -68,10 +74,41 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    menu.addEventListener('click', () => {
-      items.classList.toggle('noshow');
-      menuExpandedByClick = true;
-    });
+    
+
+
+      menu.addEventListener('click', () => {
+
+        if(isMobileView){
+          items.classList.toggle('show');
+         
+        }
+        else{
+          items.classList.toggle('noshow');
+          
+        }
+
+        menuExpandedByClick = true; 
+
+
+      });
+
+  
+  }
+
+  function testwindow(){
+    const menu = document.querySelector('.first');
+    const items = document.querySelector('.second');
+    const isMobileView = window.innerWidth <= 768;
+
+    if(isMobileView){
+      menu.classList.remove('show');
+      items.classList.remove('noshow');
+    }
+    else{
+      menu.classList.remove('noshow');
+      items.classList.remove('show');
+    }
   }
 
 
@@ -82,6 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+  window.addEventListener('resize', testwindow);
+
+  testwindow();
   toggleMenu();
 })
 

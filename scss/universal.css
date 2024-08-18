@@ -1,10 +1,10 @@
 body{
   text-align: center;
+  padding-top: 3rem;
 }
 
 
 .nav{
-  position: sticky !important;
   top: 0;
   left: 0;
   opacity: 1;
@@ -12,10 +12,17 @@ body{
   flex-direction: column;
   width: 100%;
 }
+
+.fixedheight{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 .first{
   cursor: pointer;
   display: none;
-  position: sticky !important;
 }
 
 .second{
@@ -44,6 +51,18 @@ body{
 
 
 @media (max-width: 768px){
+
+  body{
+    padding-top: 2rem;
+  }
+
+  .first{
+    display: flex;
+  }
+
+  .first.noshow{
+    display: none;
+  }
   
   .second{
     display: none;

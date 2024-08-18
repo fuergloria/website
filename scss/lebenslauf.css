@@ -37,18 +37,17 @@ h3 {
 
 .topbar-container{
   padding: 0;
-  
-  min-height: 100vh;
+  min-height: 90vh;
   box-sizing: border-box;
   animation-delay:0s;
 }
 
 
 .topbar2-container{
-  max-width: 70%;
+  max-width: 80%;
   background-color: white;
   box-sizing: border-box;   
-  margin: 3rem 0; 
+  margin: 0; 
 }
 
 .bewerbungsbild-container {
@@ -66,10 +65,16 @@ h3 {
   margin: 1rem;
 }
 
+.kurzprofil-container p{
+  margin: 0;
+}
+
 .zumir{
-  width: 80%;
+  max-width: 95%;
   max-height: 100%;
   box-sizing: border-box;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .topbar-container, .background{
