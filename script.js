@@ -2,18 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
  
   function flyfirstball(){
-    const nobball = document.querySelector('.nobball');
+    const ball = document.querySelector('.ball');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        nobball.classList.add('animate');
-        observer.unobserve(nobball); // Beobachtung beenden, nachdem die Animation gestartet wurde
+        ball.classList.add('animate');
+        observer.unobserve(ball); // Beobachtung beenden, nachdem die Animation gestartet wurde
       }
     });
   });
 
-  observer.observe(nobball);
+  observer.observe(ball);
   }
 
   function wigglevase(){
@@ -33,15 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function flyball2() {
 
-    const nobball2 = document.getElementById("nobball2");
+    const ball2 = document.getElementById("ball2");
     
 
 
-    nobball2.addEventListener("click", () => {
-      nobball2.style.animation = "flynobBall2 2s ease-in-out forwards";
+    ball2.addEventListener("click", () => {
+      ball2.style.animation = "flyball2 2s ease-in-out forwards";
 
       setTimeout(() => {
-        nobball2.style.animation = "flynobBall2 2s ease-in-out forwards";
+        ball2.style.animation = "flyball2 2s ease-in-out forwards";
       }, 10);
     });
 
@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function flyball3(){
-    const nobball3 = document.getElementById("nobball3");
-    nobball3.addEventListener("click", () => {
-      nobball3.style.animation = "flynobBall3 2s ease-in-out forwards";
+    const ball3 = document.getElementById("ball3");
+    ball3.addEventListener("click", () => {
+      ball3.style.animation = "flyball3 2s ease-in-out forwards";
 
       setTimeout(() => {
-        nobball3.style.animation = "flynobBall3 2s ease-in-out forwards";
+        ball3.style.animation = "flyball3 2s ease-in-out forwards";
       }, 10);
     });
   }
@@ -79,13 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
 
-  
 
-
-
-
-
-  // Initial check on page load
 
   wigglevase();
   flyfirstball();

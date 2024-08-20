@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMenuscroll() {
     requestAnimationFrame(()=>{
       const currentScrollTop = window.scrollY;
-    const items = document.querySelector('.second');
-    const dropdown = document.querySelector('.first');
+    const items = document.querySelector('.nav-second');
+    const dropdown = document.querySelector('.nav-first');
 
     if (!items) {
-      console.error("Element with class 'second' not found");
+      console.error("Element with class 'nav-second' not found");
       return;
     }
 
     if(!dropdown){
-      console.error("Element with class 'first' not found");
+      console.error("Element with class 'nav-first' not found");
     }
 
     const isMobileView = window.innerWidth <= 768; // Check if screen width is 768px or less
@@ -59,18 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleMenu() {
-    const menu = document.querySelector('.first');
-    const items = document.querySelector('.second');
+    const menu = document.querySelector('.nav-first');
+    const items = document.querySelector('.nav-second');
 
     const isMobileView = window.innerWidth <= 768;
 
     if (!menu) {
-      console.error("Element with class 'first' not found");
+      console.error("Element with class 'nav-first' not found");
       return;
     }
 
     if (!items) {
-      console.error("Element with class 'second' not found");
+      console.error("Element with class 'nav-second' not found");
       return;
     }
 
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function testwindow(){
-    const menu = document.querySelector('.first');
-    const items = document.querySelector('.second');
+    const menu = document.querySelector('.nav-first');
+    const items = document.querySelector('.nav-second');
     const isMobileView = window.innerWidth <= 768;
 
     if(isMobileView){

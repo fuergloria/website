@@ -5,7 +5,6 @@
   
 }
 
-
 .artheader {
   flex: 1;
   display: flex;
@@ -34,11 +33,6 @@
   justify-content: center;
   align-items: center;
   flex: 1;
-}
-
-
-.test {
-  display: flex;
 }
 
 
@@ -78,6 +72,8 @@
 .artheader {
   padding: 2rem;
   clip-path: polygon(0, 100% 0, 85% 100%, 15% 100%);
+  flex: 2;
+  display: flex;
 }
 
 .artheader p {
@@ -92,7 +88,6 @@
 .artheader2 {
   position: relative;
   padding: 2rem;
-  margin-top: 8rem;
   z-index: 1;
 }
 
@@ -113,7 +108,7 @@
   background: linear-gradient(to bottom, #0D9488, #064E3B);
 }
 
-.verlauf {
+.color-gradient {
   background: linear-gradient(to bottom, #0D9488, #064E3B);
 }
 
@@ -121,6 +116,7 @@
   display: flex;
   justify-content: center;
   background: linear-gradient(to bottom, #FFF, #0D9488);
+  margin-bottom: 8rem;
 }
 
 .art2 {
@@ -137,42 +133,16 @@
 }
 
 
-
-.middle-column,
-.side-column {
-  /*
-  background: linear-gradient(45deg, #0D9488, transparent 50%),
-    linear-gradient(-45deg, #1F2937, transparent 50%);*/
-  padding-right: calc(var(--bs-gutter-x)* .5);
-  padding-bottom: calc(var(--bs-gutter-x)* .5);
-
-}
-
-
-
-
-.bild-container {
+.img-container {
   position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
   z-index: 2;
   margin: 0;
-}
-
-
-
-.vogel-container,
-.pokemon-container {
-  padding-bottom: calc(var(--bs-gutter-x)* .5);
   padding-top: calc(var(--bs-gutter-x)* .5);
 }
 
-.hand-container,
-.frog-container {
-  position: relative;
-  width: 100%;
-}
 
 .hand-container {
   overflow: visible;
@@ -185,11 +155,7 @@
   transform: rotate(-45deg) scale(0.707);
 }
 
-.frog-container {
-  overflow: hidden;
-  height: auto;
-  padding-bottom: 0;
-}
+
 
 .frog-image {
   width: 100%;
@@ -208,7 +174,7 @@
   background-position: center;
   position: absolute;
 
-  top: 0;
+  top: calc(var(--bs-gutter-x)* .5);
   left: 0;
   width: 100%;
   height: 100%;
@@ -239,10 +205,6 @@
 .carousel-indicators .active {
   background-color: #0D9488;
 }
-
-
-
-
 
 
 .vase {
@@ -285,7 +247,6 @@
 
 .booty {
   width: 100%;
-
 }
 
 .flower {
@@ -300,11 +261,8 @@
       75% 65%, 66% 66%, 65% 63%, 50% 63%, 0% 60%);
 
   transition: transform 4s ease-in-out;
-  /* Transition für die Transformationsänderungen */
   transform-origin: center;
-  /* Setzt den Ursprung der Transformation in die Mitte */
   opacity: 0;
-  /* Startet das Bild unsichtbar */
   cursor: pointer;
 }
 
@@ -337,7 +295,7 @@
 }
 
 
-.nobball {
+.ball {
   position: absolute;
   top: 50%;
   left: -2rem;
@@ -345,11 +303,11 @@
 
 }
 
-.nobball.animate {
-  animation: flynobBall 2s ease-in-out forwards;
+.ball.animate {
+  animation: flyball 2s ease-in-out forwards;
 }
 
-.nobball2 {
+.ball2 {
   position: absolute;
   top: 50%;
   left: 30%;
@@ -357,7 +315,7 @@
   cursor: pointer;
 }
 
-.nobball3 {
+.ball3 {
   position: absolute;
   top: 45%;
   left: 85%;
@@ -367,7 +325,7 @@
 
 
 
-@keyframes flynobBall {
+@keyframes flyball {
   0% {
     top: 50%;
     left: -1.5rem;
@@ -398,7 +356,7 @@
   }
 }
 
-@keyframes flynobBall2 {
+@keyframes flyball2 {
   0% {
     top: 50%;
     left: 30%;
@@ -432,7 +390,7 @@
   }
 }
 
-@keyframes flynobBall3 {
+@keyframes flyball3 {
   0% {
     top: 45%;
     left: 85%;

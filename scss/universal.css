@@ -20,22 +20,22 @@ body{
   z-index: 100;
 }
 
-.first{
+.nav-first{
   cursor: pointer;
   display: none;
 }
 
-.second{
+.nav-second{
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.first.show{
+.nav-first.show{
   display: flex;
 }
-.second.noshow{
+.nav-second.noshow{
   display: none;
 }
 
@@ -56,19 +56,19 @@ body{
     padding-top: 2rem;
   }
 
-  .first{
+  .nav-first{
     display: flex;
   }
 
-  .first.noshow{
+  .nav-first.noshow{
     display: none;
   }
   
-  .second{
+  .nav-second{
     display: none;
   }
 
-  .second.show{
+  .nav-second.show{
     display: flex;
   }
 }
