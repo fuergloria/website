@@ -2,8 +2,9 @@
   min-height: 95vh;
   display: flex;
   flex-direction: column;
-  
+
 }
+
 
 .artheader {
   flex: 1;
@@ -33,7 +34,10 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+  
 }
+
+
 
 
 .aboutmetextcontainer {
@@ -43,17 +47,17 @@
   align-items: center;
   margin: 0;
   padding: 2rem;
-  width: 80%;  
+  width: 80%;
 }
 
 
-.aboutmetext{
+.aboutmetext {
   text-align: justify;
   text-align-last: center;
 }
 
-@media (min-width: 1250px){
-  .aboutmetext{
+@media (min-width: 1250px) {
+  .aboutmetext {
     width: 90%;
     padding: 3rem 0;
   }
@@ -102,15 +106,18 @@
   z-index: 0;
 }
 
+
 .art {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #0D9488, #064E3B);
 }
 
+
 .color-gradient {
   background: linear-gradient(to bottom, #0D9488, #064E3B);
 }
+
 
 .art2container {
   display: flex;
@@ -119,12 +126,14 @@
   margin-bottom: 8rem;
 }
 
+
 .art2 {
   max-width: 70%;
   display: flex;
   justify-content: center;
   margin-bottom: -8%;
 }
+
 
 .bottom {
   width: 70%;
@@ -154,7 +163,6 @@
   height: auto;
   transform: rotate(-45deg) scale(0.707);
 }
-
 
 
 .frog-image {
@@ -428,19 +436,14 @@
 }
 
 
-
-
-
-
-
 @media (max-width: 768px) {
 
   .aboutmetext {
-   flex-basis: 100%;
+    flex-basis: 100%;
 
   }
 
-  .aboutheader{
+  .aboutheader {
     padding: 2rem 0rem;
   }
 
@@ -462,8 +465,3 @@
 
 
 }
-
-
-
-
-/*# sourceMappingURL=mainstyle.css.map */
